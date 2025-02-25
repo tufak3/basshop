@@ -18,7 +18,7 @@ function App() {
             </div>
             <div className='left' style={{ marginTop: '30px' }}>
               <p className='main-container-text'>Электрогитары</p>
-              <img src={electro} alt="Электрогитары" className='main-container-left-img-second' />
+              <img src={electro} alt="Электрогитары" className='main-container-left-img-second' style={{width:'222px'}}/>
             </div>
           </div>
 

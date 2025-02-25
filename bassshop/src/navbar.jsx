@@ -1,5 +1,4 @@
 import './navbar.css'
-
 import shopLogo from '/Logo.svg'
 import searchIcon from '/Search.svg'
 import profileIcon from '/profile.svg'
@@ -13,8 +12,7 @@ function Navbar(){
         <div className='nav-container'>
             <div className='navbar'>
                 <div className='logo'>
-                    <img src={shopLogo} alt="logo" className='logo-img' />
-                    
+                    <img src={shopLogo} alt="logo" className='logo-img'/>
                 </div>
                 <div className='name'>
                 <p>BASS <br></br> SHOP</p>
