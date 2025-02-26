@@ -1,4 +1,4 @@
-import './navbar.css'
+import '../styles/navbar.css'
 import shopLogo from '/Logo.svg'
 import searchIcon from '/Search.svg'
 import profileIcon from '/profile.svg'

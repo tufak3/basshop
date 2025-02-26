@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 .main-container-wrapper{
-  margin-top: 42px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
-.main-container{
+.main-container {
   display: flex;
+  gap: 30px;
+width: 1340px;
 }
 .left{
   display: flex;
   width: 468px;
   height: 468px;
   border-radius: 30px;
-  background-color: #D9D9D9;
+  cursor: pointer;
+  background-color: #ECECEC;
 }
 .main-container-left-img{
-  margin-top: 40px;
+  margin-top: 44px;
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
 }
-.main-container-text{
+.main-container-text {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   color: #000000;
   font-family: 'Exo 2', sans-serif;
-  margin-top: 39px;
-  margin-left: 30px;
+  margin: 39px 0 0 30px;
   white-space: nowrap;
-  overflow: hidden;
-  max-width: 100%;
-  font-weight: 900;
+  z-index: 1;
 }
 .main-container-left-img-second{
   margin-top: 39px;
@@ -39,42 +39,51 @@
   display: flex;
   justify-content: flex-end;
 }
-.main-container-middle{
+.main-container-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: 468px;
-  height:219px;
-  background-color: #D9D9D9;
-  border-radius: 30px;
-  margin-left: 30px;
+  height: auto;
+  margin-left: 0;
+
+  
 }
-.middle{
-  margin-bottom: 30px;
+.middle {
+  margin-bottom: 0;
   display: flex;
   width: 468px;
   height: 219px;
-  background-color: #D9D9D9;
+  background-color: #ECECEC;
   border-radius: 30px;
+  position: relative;
+  overflow: hidden;
 }
-.main-container-middle-img{
-  margin-top: -15px;
-  margin-left: auto;
-  width: 216px;
-  height: 277px;
-  display: flex;
-  justify-content: flex-end;
+.main-container-middle-img {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  object-fit: contain;
+  justify-self: center;
+  align-items: center;
 }
 .right{
   width: 344px;
   height: 302px;
-  background-color: #D9D9D9;
+  background-color: #ECECEC;
   border-radius: 30px;
-  margin-left: 30px;
+  cursor: pointer;
   margin-bottom: 30px;
 }
 .scissors-img{
   margin-top: 30px;
   margin-left: 30px;
-  margin-bottom: 27px;
-
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
 }
 .scissors-text{
   font-size: 16px;
@@ -86,5 +95,6 @@
   margin-top: 0;
   word-wrap: break-word;
   max-width: 80%;
+  line-height: 19px;
 }
 

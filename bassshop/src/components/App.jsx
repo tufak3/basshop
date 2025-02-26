@@ -1,4 +1,4 @@
-import './App.css'
+import '../styles/App.css'
 import bass from '/bass.svg'
 import strunes from '/strunes.svg'
 import amp from '/amp.svg'
@@ -6,6 +6,7 @@ import electro from '/electro.svg'
 import pedal from '/pedal_test.svg'
 import strunesBass from '/strunes_bass.svg'
 import scissors from '/scissors.svg'
+import cartmaster from '/masterscart.svg'
 function App() {
   return (
     <>
@@ -18,7 +19,7 @@ function App() {
             </div>
             <div className='left' style={{ marginTop: '30px' }}>
               <p className='main-container-text'>Электрогитары</p>
-              <img src={electro} alt="Электрогитары" className='main-container-left-img-second' style={{width:'222px'}}/>
+              <img src={electro} alt="Электрогитары" className='main-container-left-img-second' style={{width:'218px'}}/>
             </div>
           </div>
 
@@ -28,12 +29,12 @@ function App() {
               <img src={strunes} alt="Струны для электрогитар" className='main-container-middle-img' style={{ marginTop: '-35px' }} />
             </div>
             <div className='middle'>
-              <p className='main-container-text'>Комбики и<br /> усиление</p>
-              <img src={amp} alt="комбики и усиление" className='main-container-middle-img' style={{ width: '169px', height: '152px', marginTop: '25px', marginLeft: '100px' }} />
+              <p className='main-container-text' >Комбики и<br /> усиление</p>
+              <img src={amp} alt="комбики и усиление" className='main-container-middle-img' style={{ marginBottom: '60px',marginRight: '24px' }} />
             </div>
             <div className='middle' >
               <p className='main-container-text'>Аксессуары<br />для электрогитар</p>
-              <img src={pedal} alt="Струны для электрогитар" className='main-container-middle-img' style={{ marginTop: '-20px', width: '169px', height: '277px' }} />
+              <img src={pedal} alt="Струны для электрогитар" className='main-container-middle-img' style={{ marginTop: '-20px', width: '166px', height: '277px' }} />
             </div>
             <div className='middle'>
               <p className='main-container-text'>Струны для<br /> бас-гитар</p>
@@ -42,7 +43,9 @@ function App() {
           </div>
           <div className='main-container-right'>
             <div className='right'>
-              <p className='main-container-text' style={{ margin: '0' }}></p>
+              <img src={cartmaster} className='scissors-img' style={{width:'40px',height:'30px'}}/>
+              <p className='main-container-text' style={{marginTop:'0px',marginBottom:'27px'}}>Своя<br></br>мастерская</p>
+              <p className='scissors-text'>Каждая гитара отстраивается в нашей мастерской. Струны низко, играть удобно :)</p>
             </div>
             <div className='right'>
               <img src={scissors} className='scissors-img' />
