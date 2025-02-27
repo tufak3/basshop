@@ -2,8 +2,10 @@
 
 .footer-container{
     width: 100%;
-    height: 388px;
+    height: auto;
+    min-height: 388px;
     background-color: #D9D9D9;
+    padding: 40px 20px;
 }
 
 .footer-content{
@@ -11,24 +13,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 30px;
 }
 
 .footer-content-text{
-    font-size: 34px;
+    font-size: clamp(24px, 3vw, 34px);
     font-weight: 500;
-    line-height: 46px;
+    line-height: 1.35;
     font-family: 'Exo 2', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 15px;
 }
 .footer-content-links{
-    font-size: 26px;
+    font-size: clamp(20px, 2.5vw, 26px);
     font-weight: 800;
-    line-height: 31px;
+    line-height: 1.2;
     font-family: 'Exo 2', sans-serif;
-    width: 842px;
+    width: 100%;
+    max-width: 842px;
     height: 70px;
     color: #FFFFFF;
     background-color: #565656;
@@ -36,12 +41,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .footer-content-about{
-    font-size: 30px;
+    font-size: clamp(24px, 2.5vw, 30px);
     font-weight: 500;
-    line-height: 36px;
+    line-height: 1.2;
     color: black;
     font-family: 'Exo 2', sans-serif;
 }
@@ -50,14 +57,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: clamp(20px, 4vw, 70px);
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+.footer-content-socials img {
+    width: clamp(30px, 4vw, 40px);
+    height: auto;
 }
 .number{
     color: #565656;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.2;
     font-family: 'Exo 2', sans-serif;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-content-text br {
+        display: none;
+    }
+
+    .footer-content-links {
+        height: 60px;
+    }
+
+    .footer-content-socials {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        gap: 15px;
+    }
+
+    .footer-content-links {
+        height: 50px;
+    }
+
+    .footer-content-socials {
+        gap: 15px;
+    }
 }
 
 

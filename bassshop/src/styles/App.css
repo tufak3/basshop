@@ -1,100 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-.main-container-wrapper{
+.main-container-wrapper {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
 }
+
 .main-container {
   display: flex;
   gap: 30px;
-width: 1340px;
+  width: 100%;
+  max-width: 1340px;
+  flex-wrap: wrap;
 }
-.left{
+
+.main-container-left {
   display: flex;
-  width: 468px;
-  height: 468px;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1 1 468px;
+  min-width: 300px;
+}
+
+.left {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 30px;
   cursor: pointer;
   background-color: #ECECEC;
+  overflow: hidden;
 }
-.main-container-left-img{
-  margin-top: 44px;
-  margin-left: auto;
-  display: flex;
-  justify-content: flex-end;
+
+.main-container-left-img,
+.main-container-left-img-second {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 28px;
 }
+
 .main-container-text {
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px);
   font-weight: 900;
   color: #000000;
   font-family: 'Exo 2', sans-serif;
-  margin: 39px 0 0 30px;
-  white-space: nowrap;
+  margin: 30px 0 0 30px;
+  white-space: normal;
   z-index: 1;
+  position: relative;
 }
-.main-container-left-img-second{
-  margin-top: 39px;
-  margin-left: -17px;
-  display: flex;
-  justify-content: flex-end;
-}
+
 .main-container-middle {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 468px;
-  height: auto;
-  margin-left: 0;
-
-  
+  flex: 1 1 468px;
+  min-width: 300px;
 }
+
 .middle {
-  margin-bottom: 0;
-  display: flex;
-  width: 468px;
-  height: 219px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 468/219;
   background-color: #ECECEC;
   border-radius: 30px;
-  position: relative;
   overflow: hidden;
 }
+
 .main-container-middle-img {
   position: absolute;
   right: 0;
-  bottom: -30px;
-  width: auto;
+  bottom: 0;
+  max-width: 100%;
   height: auto;
-  max-width: 50%;
-  object-fit: contain;
-  justify-self: center;
-  align-items: center;
 }
-.right{
-  width: 344px;
-  height: 302px;
+
+.main-container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1 1 344px;
+  min-width: 300px;
+}
+
+.right {
+  width: 100%;
   background-color: #ECECEC;
   border-radius: 30px;
   cursor: pointer;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 302px
 }
-.scissors-img{
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 20px;
+
+.scissors-img {
   width: 30px;
   height: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
-.scissors-text{
-  font-size: 16px;
+
+.main-container-scissors-text {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 900;
+  color: #000000;
+  font-family: 'Exo 2', sans-serif;
+  margin: 8px 0 20px 0;
+  white-space: normal;
+}
+
+.scissors-text {
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 400;
   color: #000000;
   font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 100%;
+}
+.main-container-scissors-text, .scissors-text, .scissors-img{
   margin-left: 30px;
-  padding: 0;
-  margin-top: 0;
-  word-wrap: break-word;
-  max-width: 80%;
-  line-height: 19px;
+}
+/* Корректируем медиа-запросы для контроля размеров изображений */
+@media (max-width: 1380px) {
+  .main-container-left-img,
+  .main-container-left-img-second {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+  }
+
+  .main-container-middle-img {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
+@media (max-width: 1200px) {
+  .main-container-left-img,
+  .main-container-left-img-second {
+    width: 55%;
+    border-radius: 10px;
+  }
+
+  .main-container-middle-img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-container-left-img,
+  .main-container-left-img-second {
+    object-fit: contain;
+  }
+
+  .main-container-middle-img {
+    object-fit: contain;
+  }
+
+  .middle {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container-wrapper {
+    margin-top: 15px;
+  }
+  
+  .main-container {
+    gap: 15px;
+  }
+  
+  .right {
+    padding: 20px;
+  }
+
+  .main-container-left-img,
+  .main-container-left-img-second,
+  .main-container-middle-img {
+    position: absolute;
+    
+    object-fit: contain;
+  }
+}

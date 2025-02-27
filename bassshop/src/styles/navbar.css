@@ -153,5 +153,121 @@ ul{
     transform-origin: bottom left;
 }
 
+/* Добавляем медиа-запросы для адаптивности */
+@media (max-width: 1380px) {
+    .navbar {
+        width: 95%;
+    }
+
+    .input-cont {
+        width:100%;
+    }
+
+    .categories-list {
+        width: 95%;
+    }
+}
+@media (max-width: 1300px) {
+
+    .input-cont {
+        width:90%;
+    }
+
+    .categories-list {
+        width: 95%;
+    }
+}
+@media (max-width: 1200px) {
+    .navbar {
+        width: 90%;
+    }
+
+    .input-text {
+        width: 90%;
+    }
+
+    .contacts-button-text {
+        width: 140px;
+        font-size: 18px;
+    }
+
+    .categories-list {
+        width: 90%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts-button-text {
+        display: none;
+    }
+
+    .input-text {
+        font-size: 18px;
+    }
+
+    .categories-list {
+        padding: 0 15px;
+    }
+
+    .category-item {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        height: 70px;
+    }
+
+    .categories-list {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .categories-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-item {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        height: 60px;
+    }
+
+    .logo-img {
+        width: 28px;
+        height: 42px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .input-text {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    .favorites-button,
+    .cart-button,
+    .profile-button {
+        margin-left: 15px;
+    }
+
+    .favorites-button img,
+    .cart-button img,
+    .profile-button img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
 
 
