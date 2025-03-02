@@ -70,8 +70,12 @@
   background-color: #ECECEC;
   border-radius: 30px;
   overflow: hidden;
+  cursor: pointer;
 }
-
+.middle:hover, .right:hover, .left:hover{
+  background-color: #D9D9D9;
+  transition: background-color 1ms;
+}
 .main-container-middle-img {
   position: absolute;
   right: 0;

@@ -4,9 +4,31 @@ import searchIcon from '/Search.svg'
 import profileIcon from '/profile.svg'
 import favoritesIcon from '/favorite.svg'
 import cartIcon from '/cart.svg'
-
-
+import LoginPopup from './loginpopup.jsx'
+import RegisterPopup from './registerpopup.jsx'
+import {useState} from 'react'
 function Navbar(){
+    const [isOpen, setIsOpen] = useState(false);
+    const [registerOpen, setRegisterOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const toggleRegister = () => {
+        setRegisterOpen(!registerOpen);
+    };
+
+    const openRegister = () => {
+        setIsOpen(false);
+        setRegisterOpen(true);
+    };
+
+    const openLogin = () => {
+        setRegisterOpen(false);
+        setIsOpen(true);
+    };
+
     return(
         <>
         <div className='nav-container'>
@@ -42,7 +64,7 @@ function Navbar(){
                         </a>
                     </div>
                     <div className='profile-button'>
-                        <a href="/profile">
+                        <a onClick={toggleMenu}>
                             <img src={profileIcon} alt="Профиль" />
                         </a>
                     </div>
@@ -53,7 +75,8 @@ function Navbar(){
             </div>
             
         </div>
-        
+        {isOpen && <LoginPopup isOpen={isOpen} toggleMenu={toggleMenu} openRegister={openRegister} />}
+        {registerOpen && <RegisterPopup isOpen={registerOpen} toggleRegister={toggleRegister} openLogin={openLogin} />}
         </>
     )
 }

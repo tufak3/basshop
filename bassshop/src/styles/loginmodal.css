@@ -1,0 +1,98 @@
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: 'Exo 2', sans-serif;
+  }
+  
+  .auth-modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .auth-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .text-auth{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 700;   
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .form-group input::placeholder{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+
+  .auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .login-button, .register-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+  }
+  .login-button:hover{
+    background-color: #327535;
+    transition: background-color 0.3s ease;
+}
+  
+
+  .register-button {
+    font-size: 16px;
+    background-color: #f1f1f1;
+  }
+.register-button:hover{
+    background-color: #D9D9D9;
+    transition: background-color 0.3s ease;
+}

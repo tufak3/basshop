@@ -13,7 +13,7 @@ function Footer(){
                     <p>Главный телеграм канал о гитарах. Новости, акции, видео<br></br>Добро пожаловать!</p>
                 </div>
                 <div className="footer-content-links">
-                <a href="https://t.me/zdohnuu" className='footer-content-links'>НАШ TELEGRAM КАНАЛ</a>
+                <a href="https://t.me/zdohnuu" target='_blank' className='footer-content-links'>НАШ TELEGRAM КАНАЛ</a>
                 </div>
                 <div className="footer-content-about">
                 <p>О нас</p>
