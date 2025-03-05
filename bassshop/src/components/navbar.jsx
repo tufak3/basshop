@@ -4,9 +4,10 @@ import searchIcon from '/Search.svg'
 import profileIcon from '/profile.svg'
 import favoritesIcon from '/favorite.svg'
 import cartIcon from '/cart.svg'
-import LoginPopup from './loginpopup.jsx'
-import RegisterPopup from './registerpopup.jsx'
+import LoginPopup from './Loginpopup.jsx'
+import RegisterPopup from './Registerpopup.jsx'
 import {useState} from 'react'
+import { Route,Routes,Link } from 'react-router-dom'
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     const [registerOpen, setRegisterOpen] = useState(false);
@@ -33,12 +34,16 @@ function Navbar(){
         <>
         <div className='nav-container'>
             <div className='navbar'>
+                <Link to={"/"} style={{textDecoration:'none'}}>
                 <div className='logo'>
                     <img src={shopLogo} alt="logo" className='logo-img'/>
                 </div>
+                </Link>
+                <Link to={"/"} style={{textDecoration:'none'}}>
                 <div className='name'>
                 <p>BASS <br></br> SHOP</p>
                 </div>
+                </Link>
                 <div className='input-cont'>
                     <div className="search-wrapper">
                         <img src={searchIcon} alt="search" className="search-icon" />

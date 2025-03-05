@@ -1,0 +1,55 @@
+.category-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.category-container{
+    display: flex;
+    width: 100%;
+    max-width: 1340px;
+}
+.category-left{
+    display: flex;
+    width: 380px;
+    height: 1737px;
+    flex-direction: column;
+    background-color: #ECECEC;
+    border-radius: 30px;
+}
+.category-img{
+    width: 280px;
+    height: 400px;
+    position: absolute;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* создаем 3 колонки равной ширины */
+    gap: 33px;
+    max-width: 970px;
+}
+.title{
+    display: flex;
+    width: 100%;
+    height: 7%;
+}
+.category-list-item{
+    width: 280px;
+    margin-left: 20px;
+}
+.item-container{
+    border-radius: 30px;
+    width: 280px;
+    height: 400px;
+    display: flex;
+    background-color: #ECECEC;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 280px;
+}
